@@ -22,7 +22,7 @@ class ImageInfoMessage
 
       img = Magick::ImageList.new(tf.path)
       new_img = img.blur_image(20.0, 10.0)
-      font = "public/fonts/Kazesawa-Bold.ttf"
+      font = "public/fonts/Kazesawa-Extrabold.ttf"
       draw = Magick::Draw.new
       draw.annotate(new_img, 0, 0, 5, 5, 'ぼかしたら\nちょっと\nおしゃれ') do
         self.font      = font
