@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: postgres
+  database: template1
   host: localhost
   username: <%= ENV['PG_USER'] %>
   password: <%= ENV['PG_PASS'] %>

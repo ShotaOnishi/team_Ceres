@@ -10,29 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111155829) do
+ActiveRecord::Schema.define(version: 20161111162249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "lists", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "value"
-    t.string   "category"
-    t.text     "picture"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "menu", force: :cascade do |t|
-    t.text     "name"
-    t.text     "picture"
-    t.text     "detail"
-    t.string   "category"
-    t.integer  "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "menus", force: :cascade do |t|
     t.string   "name"
@@ -40,51 +21,6 @@ ActiveRecord::Schema.define(version: 20161111155829) do
     t.text     "detail"
     t.string   "category"
     t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "shop_id"
-    t.integer  "category_id"
-  end
-
-  create_table "order_groups", force: :cascade do |t|
-    t.boolean  "enter"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.integer  "table"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "shop_id"
-    t.string   "line_group_id"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.string   "menu_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.integer  "order_group_id"
-    t.boolean  "ordered"
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.text   "file"
-    t.string "comment"
-  end
-
-  create_table "shops", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "user_order_groups", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "order_group_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "line_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
