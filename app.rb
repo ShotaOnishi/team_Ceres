@@ -91,20 +91,20 @@ post '/callback' do
   callback_observer = CallbackSubject.instance
   callback_observer.delete_observers()
   if message_type == "text" || message_type == "postback"
-    callback_observer.add_observer(WelcomeMessage.new)
-    callback_observer.add_observer(FirstTimeMessage.new)
-    callback_observer.add_observer(ShowMenuCategoryMessage.new)
-    callback_observer.add_observer(ShowMenuMessage.new)
-    callback_observer.add_observer(EntryOrExitMessage.new)
-    callback_observer.add_observer(EntryMessage.new)
-    callback_observer.add_observer(ExitMessage.new)
-    callback_observer.add_observer(CheckMessage.new)
-    callback_observer.add_observer(CheckMessageSplit.new)
-    callback_observer.add_observer(WaterMessage.new)
-    callback_observer.add_observer(LocalMessage.new)
+    # callback_observer.add_observer(WelcomeMessage.new)
+    # callback_observer.add_observer(FirstTimeMessage.new)
+    # callback_observer.add_observer(ShowMenuCategoryMessage.new)
+    # callback_observer.add_observer(ShowMenuMessage.new)
+    # callback_observer.add_observer(EntryOrExitMessage.new)
+    # callback_observer.add_observer(EntryMessage.new)
+    # callback_observer.add_observer(ExitMessage.new)
+    # callback_observer.add_observer(CheckMessage.new)
+    # callback_observer.add_observer(CheckMessageSplit.new)
+    # callback_observer.add_observer(WaterMessage.new)
+    # callback_observer.add_observer(LocalMessage.new)
     callback_observer.add_observer(NickNameMessage.new)
   elsif message_type == "image"
-    callback_observer.add_observer(ImageInfoMessage.new(client))
+    # callback_observer.add_observer(ImageInfoMessage.new(client))
   else
   end
   events.each { |event|
