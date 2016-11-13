@@ -1,4 +1,3 @@
-
 class ResponceMessage
   def output_message(context)
     event = context.value

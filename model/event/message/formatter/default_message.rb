@@ -6,7 +6,7 @@ class DefaultMessage
     context.value['message']['text'] = response.body["utt"]
     {
       type: "text",
-      text: context.value['message']['text'] + "aaaaa"
+      text: context.value['message']['text']
     }
   end
 end
