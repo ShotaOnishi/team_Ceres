@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: template1
+  host: localhost
+  username: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PASS'] %>
+  encoding: utf8
+  pool: 5
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>

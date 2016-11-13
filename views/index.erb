@@ -1,0 +1,12 @@
+<% @menus.each do |menu|%>
+  <p><%=menu.name%><span><a href="/delete/<%= menu[:id] %>" class="btn btn-danger">Delete</a></span></p>
+  <ul>
+    <li><%=menu.price%></li>
+    <li><%=menu.picture%></li>
+    <li><%=menu.category%></li>
+    <li><%=menu.detail%></li>
+  </ul>
+<%end%>
+
+  <a href="/new">Add menu</a>
+
