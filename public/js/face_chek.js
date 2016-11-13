@@ -26,7 +26,7 @@ $(function()
           {
             // ラッパー要素内に、顔範囲を示すdiv要素を追加
             $( "#face-image" ).after( '<div class="face-image-border"></div>' ) ;
-            $("#image-bool").after( '<div>hello!!</div>' ) ;
+            $("#image_bool").after( '<div>hello!!</div>' ) ;
             // 顔範囲の場所を動的に指定
             $(".face-image-border").eq(i).css( {
               left:obj[i].x * obj[i].scaleX + "px" ,
