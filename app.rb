@@ -13,6 +13,8 @@ require_all 'model'
 require_all 'module'
 include Line
 
+set :public, File.dirname(__FILE__) + '/public'
+
 # require 'dotenv'
 # Dotenv.load
 
