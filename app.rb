@@ -40,7 +40,7 @@ get '/' do
     '<script src="face_check.js" type="text/javascript"></script>' +
     '<script src="jquery.facebookdetection.js" type="text/javascript"></script>' +
     '<script src="jquery.facebookdetection.min.js" type="text/javascript"></script>' +
-    "</html></body>"
+    "</html> </body>"
 
   erb :face
 end
